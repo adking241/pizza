@@ -18,16 +18,14 @@ def special_toppings
 	special_toppings = ["pineapple", "extra cheese", "double meat"].sample
 end
 
-def number_of_pizzas
+def number_of_pizzas()
 	p "How many pizzas do you want?"
 	number_of_pizzas = gets.chomp
 	number_of_pizzas.to_i
 end
 
-# def total_cost(number_of_pizzas)	
-# 	number_of_pizzas * 10
-# 	p "#{[total_cost} is your order total."
-# end
+total_cost = number_of_pizzas *	10
+	p "#{total_cost} is your order total."
 
 def make_pizza()
 		pizza_crust + " " + pizza_size + " " + meats + " " + veggies + " " + special_toppings
