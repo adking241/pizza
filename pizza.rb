@@ -34,7 +34,7 @@ def crust_cost()
 		counter + 0
 end
 
-def pizza_size_cost()
+def pizza_size_cost(pizza_size)
 	if pizza_size[small]
 		counter = counter + 10 # still need times nmbr of pizzas
 	elsif pizza_size[medium] #still need times nmbr of pizzas
@@ -43,7 +43,7 @@ def pizza_size_cost()
 		counter = counter + 20 #still need times numbr of pizzas
 end
 
-def extra_cost()
+def extra_cost(special_toppings)
 	if special_toppings[extra cheese] or special_toppings[double meat] 
 		counter = counter + 2
 	end
@@ -51,6 +51,11 @@ end
 	
 def make_pizza()
 		pizza_crust + " " + pizza_size + " " + meats + " " + veggies + " " + special_toppings
+end
+
+def total_cost(pizza_size_cost,extra_cost,crust_cost)
+	p "#{pizza_size_cost} + #{extra_cost} + #{crust_cost} = #{pizza_size_cost + extra_cost + crust_cost}"
+	p "#{total_cost} is your order total."
 end
 
 number_of_pizzas
@@ -61,8 +66,4 @@ make_pizza
 	p "Your pizza order is #{make_pizza}"
 	end
 end
-def total_cost()
-	total_cost = "#{pizza_size_cost}" + "#{extra_cost}" + "#{crust_cost}"
-	p "#{total_cost} is your order total."
-end
-end
+
